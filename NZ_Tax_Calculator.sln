@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZ_Tax_Calculator", "NZ_Tax_Calculator\NZ_Tax_Calculator.csproj", "{F58E90E1-0410-4B8D-93DA-046FF1696E25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZ_Tax_CalculatorSecond_Sprint_Unit_Test", "NZ_Tax_CalculatorSecond_Sprint_Unit_Test\NZ_Tax_CalculatorSecond_Sprint_Unit_Test.csproj", "{2C78255D-9993-479E-9A82-4E47D6F1B8D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F58E90E1-0410-4B8D-93DA-046FF1696E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F58E90E1-0410-4B8D-93DA-046FF1696E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F58E90E1-0410-4B8D-93DA-046FF1696E25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C78255D-9993-479E-9A82-4E47D6F1B8D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C78255D-9993-479E-9A82-4E47D6F1B8D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C78255D-9993-479E-9A82-4E47D6F1B8D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C78255D-9993-479E-9A82-4E47D6F1B8D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

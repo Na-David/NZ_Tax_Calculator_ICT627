@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NZ_Tax_Calculator
 {
-    public class tax_generator
+    public class Tax_Generator
     {
         public double tax;
         public void Initialize_Tax_Generator()

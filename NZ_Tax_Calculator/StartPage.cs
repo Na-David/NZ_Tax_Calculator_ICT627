@@ -16,7 +16,7 @@ namespace NZ_Tax_Calculator
             Console.WriteLine("|                                            |");
             Console.WriteLine("|               Tax Calculator               |");
             Console.WriteLine("|____________________________________________|");
-            Console.WriteLine("");
+            Console.WriteLine("");                                   
 
             Console.WriteLine("What do you want to do with our service?");
             Console.WriteLine("1. Tax Code Generation");
@@ -38,7 +38,7 @@ namespace NZ_Tax_Calculator
                 //Tax rate calculation
                 case ConsoleKey.D2:
                     tax_Generator.Initialize_Tax_Generator();
-                    break;
+                    break;  
 
             }
         }
