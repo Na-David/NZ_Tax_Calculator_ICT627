@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NZ_Tax_Calculator
 {
+    //TakeHomepay function
     public class TakeHomePay
     {
         public void question()
