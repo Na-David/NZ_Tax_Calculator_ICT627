@@ -39,14 +39,14 @@ namespace NZ_Tax_Calculator
             }
         }
 
+
+
     }
 
-    public class Weekly
+    public class TakeHomePayInterface
     {
-        public void weekly_TakeHomePay()
+        public void GenerateInterface(double Take_Home_Pay)
         {
-            double Take_Home_Pay;
-            Take_Home_Pay = (Tax_Generator.income - Tax_Generator.tax) / 52;
             Console.Clear();
             Console.WriteLine("");
             Console.WriteLine(" ___________________________________________");
@@ -57,57 +57,53 @@ namespace NZ_Tax_Calculator
             Console.WriteLine("| Your Tax Payable is : NZD " + Tax_Generator.tax);
             Console.WriteLine("| Your Weekly take home pay is : NZD " + Math.Round(Take_Home_Pay, 2));
             Console.WriteLine("|___________________________________________|");
+        }
 
+        public void StartNewPage()
+        {
             Console.ReadKey();
             StartPage new_start = new StartPage();
             new_start.InitializeWithQuestion();
         }
     }
 
-    public class Fortnightly
+    public class Weekly : TakeHomePayInterface
     {
+        TakeHomePayInterface THPInterface = new TakeHomePayInterface();
+        public void weekly_TakeHomePay()
+        {
+            double Take_Home_Pay;
+            Take_Home_Pay = (Tax_Generator.income - Tax_Generator.tax) / 52;
+            THPInterface.GenerateInterface(Take_Home_Pay);
+
+            
+        }
+    }
+
+    public class Fortnightly : TakeHomePayInterface
+    {
+        TakeHomePayInterface THPInterface = new TakeHomePayInterface();
         public void fortnightly_TakeHomePay()
         {
             double Take_Home_Pay;
             Take_Home_Pay = (Tax_Generator.income - Tax_Generator.tax) / 26;
-            Console.Clear();
-            Console.WriteLine("");
-            Console.WriteLine(" ___________________________________________");
-            Console.WriteLine("|                                           |");
-            Console.WriteLine("|            Here is your result            |");
-            Console.WriteLine("|                                           |");
-            Console.WriteLine("| Your annual income  is : NZD {0}", Tax_Generator.income);
-            Console.WriteLine("| Your Tax Payable is : NZD {0}", Tax_Generator.tax);
-            Console.WriteLine("| Your Fortnightly take home pay is : NZD {0} ", Math.Round(Take_Home_Pay, 2));
-            Console.WriteLine("|___________________________________________|");
+            THPInterface.GenerateInterface(Take_Home_Pay);
 
-            Console.ReadKey();
-            StartPage new_start = new StartPage();
-            new_start.InitializeWithQuestion();
+            THPInterface.StartNewPage();
         }
     }
 
 
-    public class Monthly
+    public class Monthly : TakeHomePayInterface
     {
+        TakeHomePayInterface THPInterface = new TakeHomePayInterface();
         public void monthly_TakeHomePay()
         {
             double Take_Home_Pay;
             Take_Home_Pay = (Tax_Generator.income - Tax_Generator.tax) / 12;
-            Console.Clear();
-            Console.WriteLine("");
-            Console.WriteLine(" ___________________________________________");
-            Console.WriteLine("|                                           |");
-            Console.WriteLine("|            Here is your result            |");
-            Console.WriteLine("|                                           |");
-            Console.WriteLine("| Your annual income  is : NZD " + Tax_Generator.income);
-            Console.WriteLine("| Your Tax Payable is : NZD " + Tax_Generator.tax);
-            Console.WriteLine("| Your Monthly take home pay is : NZD " + Math.Round(Take_Home_Pay, 2));
-            Console.WriteLine("|___________________________________________|");
+            THPInterface.GenerateInterface(Take_Home_Pay);
 
-            Console.ReadKey();
-            StartPage new_start = new StartPage();
-            new_start.InitializeWithQuestion();
+            THPInterface.StartNewPage();
         }
 
     }
